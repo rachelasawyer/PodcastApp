@@ -2,6 +2,8 @@ package rachelsawyer.com.podcastapp;
 
 import org.junit.Test;
 
+import rachelsawyer.com.podcastapp.services.RssService;
+
 import static org.junit.Assert.*;
 
 /**
@@ -9,9 +11,17 @@ import static org.junit.Assert.*;
  *
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
-public class ExampleUnitTest {
+public class RssServiceTest {
     @Test
     public void addition_isCorrect() throws Exception {
         assertEquals(4, 2 + 2);
     }
+
+    @Test
+    public void RssService_IsNotNull() throws Exception {
+        RssService service = new RssService("https://audioboom.com/channels/4829847.rss");
+
+        assertNotNull(service);
+    }
+
 }
